@@ -8,8 +8,8 @@ app.register(fastifyStatic, {
   root: path.join(__dirname, "..", "public"),
 });
 
-app.get("/", async (req, reply) => {
-  reply.sendFile("index.html");
+app.get("/yann", async (req, reply) => {
+  return reply.sendFile("index.html");
 });
 
 // 🚀 Attacher le serveur avec await pour garder le processus actif
