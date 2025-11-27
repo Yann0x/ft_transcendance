@@ -3,6 +3,7 @@
    ============================================ */
 
 import { Intro } from './intro';
+import { PongGame } from './game';
 
 /**
  * Application principale
@@ -44,6 +45,14 @@ const App = {
 
     this.appContainer.innerHTML = navbar + page + footer;
     this.appContainer.classList.add('main-content', 'flex', 'flex-col', 'flex-1');
+
+    // Initialise le jeu si on est sur la page home
+    if (name === 'home') {
+      const gameContainer = document.getElementById('game-container');
+      if (gameContainer) {
+        PongGame.init(gameContainer);
+      }
+    }
   }
 };
 
