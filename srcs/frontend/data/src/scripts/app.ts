@@ -5,8 +5,12 @@
 import { Intro } from './intro'
 import { Router } from './router'
 import { AuthModal } from './auth-modal'
-import { User } from '../shared/types'
 import { PongGame } from '../game'
+
+interface User {
+  id: string;
+  username: string;
+}
 
 /**
  * Application principale
